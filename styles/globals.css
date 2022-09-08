@@ -1,26 +1,79 @@
-html,
-body {
-  padding: 0;
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+/*
+globals
+*/
+
+html {
+    /* set root font size for `rem` use */
+    font-size: 18px;
+}
+
+:root {
+    --content-width: 48rem;
+    --size-3: 2.618rem;
+    --size-2: 1.618rem;
+    --bg-color: #E8EEFF;
+    --bg-color-2: #2a3d78;
+    --bg-color-3: #1d2a52;
+    --bg-color-4: #10172c;
+    --primary-color: #ba4666;
+    --primary-color-2: #c86b85;
+    --font-branding: 'Shippori Mincho B1';
+    --font-sans: 'Source Sans Pro';
+    --font-serif: 'Source Serif Pro';
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-sans, sans-serif);
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: var(--bg-color-3);
 }
 
-* {
-  box-sizing: border-box;
+p {
+    font-family: var(--font-serif, serif);
+    margin-top: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+h1, h2, h3 {
+    font-family: var(--font-sans, sans-serif);
+    font-weight: 600;
+}
+
+h2 {
+    font-size: var(--size-2);
+    margin-top: var(--size-2);
+    margin-bottom: 1rem;
 }
