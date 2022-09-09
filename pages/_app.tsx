@@ -9,8 +9,6 @@ import "../styles/globals.css";
 // if you want a page-unique layout, you probably have to branch off some `pageProps` field
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const { markdoc } = pageProps;
-  console.log("HEYO", markdoc);
   return (
     <>
       <Header />

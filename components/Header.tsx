@@ -2,8 +2,6 @@ import React from "react";
 import Link from "next/link";
 import styles from "./Header.module.css";
 
-//points="5,0 100,0 100,95 70,65 70,30 35,30 5,0"
-//<polyline points="0,5 0,100 95,100 0,5" fill="#D690A4" />
 const Logo: React.FC = () => {
   return (
     <svg className={styles.logo} viewBox="0 0 100 100">
