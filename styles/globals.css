@@ -40,15 +40,19 @@ html {
 
 :root {
     --content-width: 40rem;
+    --size-6: 4.209rem;
+    --size-5: 3.157rem;
+    --size-4: 2.369rem;
     --size-3: 1.777rem;
     --size-2: 1.333rem;
     --size-01: 0.75rem;
     --size-001: 0.563rem;
-    --bg-color: #E8EEFF;
+    --bg-color: #F2F6FF;
     --bg-color-2: #2a3d78;
     --bg-color-3: #1d2a52;
     --bg-color-4: #10172c;
     --primary-color: #ba4666;
+    --secondary-color: #707070;
     --primary-color-2: #c86b85;
     --font-branding: 'Shippori Mincho B1';
     --font-sans: 'Libre Franklin';

@@ -5,7 +5,7 @@ import styles from "./Header.module.css";
 const Logo: React.FC = () => {
   return (
     <svg className={styles.logo} viewBox="0 0 100 100">
-      <polyline points="0,8 0,100 92,100 72,80 20,80 20,28" fill="#D690A4" />
+      <polyline points="0,12 0,100 89,100 68,80 20,80 20,32" fill="#ba4666" />
       <polyline fill="#ba4666" points="0,0 100,0 100,100 80,80 80,20 20,20" />
     </svg>
   );
