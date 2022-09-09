@@ -54,4 +54,5 @@
 
 .menuItem {
     color: black;
+    font-family: var(--font-ui, sans-serif);
 }

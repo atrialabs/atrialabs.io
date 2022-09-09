@@ -7,4 +7,5 @@
     width: var(--content-width);
     margin-top: var(--size-3);
     margin-bottom: var(--size-3);
+    font-family: var(--font-ui, sans);
 }

@@ -39,9 +39,11 @@ html {
 }
 
 :root {
-    --content-width: 48rem;
-    --size-3: 2.618rem;
-    --size-2: 1.618rem;
+    --content-width: 40rem;
+    --size-3: 1.777rem;
+    --size-2: 1.333rem;
+    --size-01: 0.75rem;
+    --size-001: 0.563rem;
     --bg-color: #E8EEFF;
     --bg-color-2: #2a3d78;
     --bg-color-3: #1d2a52;
@@ -49,13 +51,14 @@ html {
     --primary-color: #ba4666;
     --primary-color-2: #c86b85;
     --font-branding: 'Shippori Mincho B1';
-    --font-sans: 'Source Sans Pro';
-    --font-serif: 'Source Serif Pro';
+    --font-sans: 'Libre Franklin';
+    --font-serif: 'Source Serif 4';
+    --font-ui: 'Source Sans Pro';
 }
 
 body {
     background-color: var(--bg-color);
-    font-family: var(--font-sans, sans-serif);
+    font-family: var(--font-serif, serif);
 }
 
 a {
@@ -63,13 +66,13 @@ a {
 }
 
 p {
-    font-family: var(--font-serif, serif);
+    font-family: var(--font-serif, sans-serif);
     margin-top: 1rem;
 }
 
 h1, h2, h3 {
     font-family: var(--font-sans, sans-serif);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 h2 {
