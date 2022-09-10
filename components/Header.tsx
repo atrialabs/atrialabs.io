@@ -8,11 +8,11 @@ const StyledNavigationMenuLink = styled(NavigationMenu.Link, {
   padding: "$03",
   fontFamily: "$ui",
   fontWeight: "400",
-  textDecoration: "none",
   borderRadius: "0.4rem",
+  transitionDuration: "0.5s",
 
   "&:hover": {
-    backgroundColor: "$indigo4",
+    backgroundColor: "$sand5",
   },
 
   "&[data-active]": { fontWeight: "600" },
@@ -25,7 +25,12 @@ type LinkProps = {
 
 const Link: React.FC<LinkProps> = ({ href, children }) => {
   const router = useRouter();
-  const isActive = router.asPath === href;
+  let isActive = false;
+  if (href === "/") {
+    isActive = router.asPath === "/";
+  } else {
+    isActive = router.asPath.startsWith(href);
+  }
 
   return (
     <NextLink href={href} passHref>
@@ -43,12 +48,18 @@ const Root = styled(NavigationMenu.Root, {
   alignItems: "center",
   paddingTop: "$3",
   paddingBottom: "$3",
-  backgroundColor: "$indigo4",
 
   "@md": {
-    backgroundColor: "$indigo3",
     paddingTop: "$4",
     paddingBottom: "$4",
+  },
+
+  variants: {
+    essayView: {
+      true: {
+        backgroundColor: "$sand3",
+      },
+    },
   },
 });
 
@@ -105,9 +116,13 @@ const Logo: React.FC = () => {
 };
 
 /// Header
-const Header: React.FC = () => {
+type HeaderProps = {
+  essayView: boolean;
+};
+
+const Header: React.FC<HeaderProps> = ({ essayView }) => {
   return (
-    <Root>
+    <Root essayView={essayView}>
       <Box>
         <BrandingBox>
           <LogoBox>
@@ -132,49 +147,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-
-/*
-import React from "react";
-import Link from "next/link";
-import styles from "./Header.module.css";
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import styled from "./Styles";
-
-const NavList = styled(NavigationMenu.List, {
-  backgroundColor: "$indigo4",
-});
-
-const Header: React.FC = () => {
-  return (
-    <div className={styles.box}>
-      <div className={styles.content}>
-        <NavigationMenu.Root>
-          <NavList>
-            <NavigationMenu.Item>One</NavigationMenu.Item>
-            <NavigationMenu.Item>Two</NavigationMenu.Item>
-          </NavList>
-        </NavigationMenu.Root>
-      </div>
-    </div>
-  );
-};
-*/
-
-/*
-<div className={styles.spacer}>
-          <Link href="/">
-            <a className={styles.brandingbox}>
-              <Logo />
-              <span className={styles.branding}>Atria Labs</span>
-            </a>
-          </Link>
-          <div className={styles.menu}>
-            <Link href="/essays">
-              <a className={styles.menuItem}>Essays</a>
-            </Link>
-            <Link href="/contact">
-              <a className={styles.menuItem}>Contact</a>
-            </Link>
-          </div>
-        </div>
-    */

@@ -1,11 +1,25 @@
 import React from "react";
-import styles from "./Footer.module.css";
+import styled from "../components/Styles";
+
+const Box = styled("div", {
+  display: "flex",
+  justifyContent: "center",
+  backgroundColor: "$gray3",
+  borderTop: "solid 1px $gray7",
+});
+
+const Content = styled("div", {
+  width: "$content",
+  paddingTop: "$5",
+  paddingBottom: "$5",
+  fontFamily: "$ui",
+});
 
 const Footer: React.FC = () => {
   return (
-    <div className={styles.box}>
-      <div className={styles.content}>© Atria Labs</div>
-    </div>
+    <Box>
+      <Content>© Atria Labs, 2022.</Content>
+    </Box>
   );
 };
 

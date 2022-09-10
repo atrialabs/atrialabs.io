@@ -5,7 +5,7 @@ export default function Document() {
     <Html>
       <Head>
       <link rel="stylesheet" href="https://use.typekit.net/hht6tua.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&family=Shippori+Mincho+B1:wght@600&family=Source+Sans+Pro:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600&family=Shippori+Mincho+B1:wght@600&family=Source+Sans+Pro:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet"/>
       </Head>
       <body>
         <Main />

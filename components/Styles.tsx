@@ -1,4 +1,8 @@
 import {
+  whiteA,
+  slateA,
+  mauveA,
+  grayA,
   gray,
   mauve,
   slate,
@@ -41,6 +45,8 @@ const { styled } = createStitches({
     fonts: {
       ui: "Source Sans Pro, sans-serif",
       branding: "Shippori Mincho B1, serif",
+      sans: "Libre Franklin, sans-serif",
+      serif: "Source Serif 4, serif",
     },
     fontSizes: {
       6: "4.209rem",
@@ -56,10 +62,13 @@ const { styled } = createStitches({
       "06": "0.178rem",
     },
     sizes: {
-      content: "40rem",
+      content: "45rem",
       logo: "1.333rem",
     },
     space: {
+      9: "9.969rem",
+      8: "7.478rem",
+      7: "5.61rem",
       6: "4.209rem",
       5: "3.157rem",
       4: "2.369rem",
@@ -73,6 +82,10 @@ const { styled } = createStitches({
       "06": "0.178rem",
     },
     colors: {
+      ...whiteA,
+      ...grayA,
+      ...mauveA,
+      ...slateA,
       ...gray,
       ...mauve,
       ...slate,
@@ -101,6 +114,10 @@ const { styled } = createStitches({
       ...amber,
       ...gold,
       ...bronze,
+    },
+    shadows: {
+      slim: "rgba(0, 0, 0, 0.15) 0px 2px 8px",
+      lifted: "rgba(0, 0, 0, 0.08) 0px 4px 12px",
     },
   },
 });
